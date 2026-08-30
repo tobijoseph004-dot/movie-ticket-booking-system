@@ -1,4 +1,4 @@
-# Movie-Ticket-Booking-System
+# Movie Ticket Booking-System
 This project  is a Python based application using Tkinter and MySQL.
 
 Features:
