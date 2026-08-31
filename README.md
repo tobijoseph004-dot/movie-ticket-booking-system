@@ -1,30 +1,46 @@
-🎬 CineX — Movie Ticket Booking System
-A desktop movie ticket booking application built with Python (Tkinter) and MySQL, developed as part of a Data Science program project. Simulates a real cinema booking flow — from browsing movies to seat allocation, payment, and digital ticket generation — with a separate admin dashboard for managing the catalog.
-Features
-User accounts — registration and login, with credentials stored in MySQL
-Movie browsing — categorized listings (e.g. Hollywood, Nollywood) with poster images
-Seat allocation — automatic seat assignment that checks existing bookings to avoid double-booking
-Booking & payment flow — showtime selection, price display, and payment confirmation
-Digital ticket generation — summary screen with movie, time, seat, and price
-Admin dashboard — separate login role for adding and managing movies in the catalog
-Tech Stack
-Python — application logic
-Tkinter — desktop GUI
-MySQL (mysql-connector-python) — persistent storage for users, movies, and bookings
-Pillow (PIL) — poster image rendering
-python-dotenv — environment-based configuration for database credentials
-How It Works
-On launch, users can log in or register; an admin login unlocks a separate dashboard
-The seat generator checks all existing bookings for a given movie/showtime and assigns the next available seat from a 5×20 grid, marking the show FULL once exhausted
-Booking a ticket writes a new row to the bookings table (movie, seat, showtime, price, payment status) and generates a ticket summary screen
-Admins can add new movies (title, category, price, showtimes, poster image) directly to the database from within the app
-Setup
-Clone the repo and install dependencies:
-Bash
-Create a MySQL database with users, admin, movies, and bookings tables (see schema notes below).
-Create a .env file in the project root:
-Code
-Run the app:
-Bash
-My Role
-Built independently as a course project during the Data Science program at New Horizons Computer Learning Centre — covering application architecture, the Tkinter GUI, MySQL schema and queries, the seat-allocation logic, and the end-to-end booking flow.
+# 🎬 CineX — Movie Ticket Booking System
+
+A desktop movie ticket booking application built with **Python, Tkinter, and MySQL** as part of a Data Science program project.
+
+CineX simulates a complete cinema booking experience — from browsing movies and selecting showtimes to seat allocation, payment confirmation, and digital ticket generation.
+
+---
+
+## ✨ Features
+
+- 👤 **User Accounts** — Registration and login with MySQL-backed credentials
+- 🎞️ **Movie Browsing** — Categorized movies with poster images
+- 💺 **Seat Allocation** — Automatically assigns available seats and prevents double-booking
+- 🎟️ **Booking & Payment** — Showtime selection, pricing, and payment confirmation
+- 🧾 **Digital Tickets** — Booking summary with movie, seat, time, and price
+- 🔐 **Admin Dashboard** — Add and manage movies in the catalogue
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python** — Application logic
+- **Tkinter** — Desktop GUI
+- **MySQL** — Database and persistent storage
+- **Pillow (PIL)** — Movie poster rendering
+- **python-dotenv** — Environment-based configuration
+
+---
+
+## 🔄 How It Works
+
+**Login → Browse Movies → Select Showtime → Seat Allocation → Payment → Digital Ticket**
+
+The system checks existing bookings before assigning a seat and marks a show as **FULL** when all available seats have been booked.
+
+Admins can also add and manage movies directly through the application.
+
+---
+
+## ⚙️ Setup
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd CineX
