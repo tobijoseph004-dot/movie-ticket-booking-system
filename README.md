@@ -51,10 +51,5 @@ A desktop movie ticket booking application built with **Python (Tkinter)** and *
    python "cinema_ project.py"
    ```
 
-## My Role
 
-Built independently as a course project during the Data Science program at New Horizons Computer Learning Centre — covering application architecture, the Tkinter GUI, MySQL schema and queries, the seat-allocation logic, and the end-to-end booking flow.
 
-## Notes
-
-This was built as a learning project to practice GUI development, database integration, and application-level logic in Python — not a production payment system (no real payment gateway is integrated).
